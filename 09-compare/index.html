@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Fragrances - LUXE SCENTS</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#23220f",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-stone-900 dark:text-white font-display compare-page">
+    <div class="min-h-screen pb-32">
+        <!-- Header -->
+        <header class="sticky top-0 z-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-stone-200/50 dark:border-stone-800/50">
+            <div class="flex items-center justify-between px-4 py-3">
+                <a href="../01-home/index.html" class="flex size-10 items-center justify-center rounded-full hover:bg-stone-100 dark:hover:bg-stone-800">
+                <span class="material-symbols-outlined text-2xl">arrow_back</span>
+                </a>
+                <h1 class="text-lg font-bold tracking-wider uppercase">Compare</h1>
+                <button class="flex size-10 items-center justify-center rounded-full hover:bg-stone-100 dark:hover:bg-stone-800">
+                    <span class="material-symbols-outlined text-2xl">close</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Product Comparison Scroll -->
+        <div class="overflow-x-auto no-scrollbar px-4 py-6">
+            <div class="flex gap-4 min-w-max">
+                <!-- Product 1 -->
+                <div class="w-72 bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative aspect-square">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByESiO8Hossn1Zv3h3WA90FrF71O1MU_IinUCUKbuxYFS_HfQdcRjdQJG9fcEQrR1tUUD0l-xYHpZvB_73tBwj-K2_B-Bz3UU4dEqdqxUFrXz5qsgf2CAMpolCnCPbELvNX8TLzmLrt0DpwdStiUNSbifcIRVkQzP5XOcTx49K8Np2WbrqzfsMsOKmSsQFqZV_KcOfUmSuD_w8sB3hCEFqSCT9nPDiFHK5GIxTGjK8AGN51ueTnskrqg2DGKSCEFTvDQfnSmIrf5yW');">
+                        </div>
+                        <button class="absolute top-3 right-3 size-8 rounded-full bg-white/90 dark:bg-black/70 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-sm">close</span>
+                        </button>
+                    </div>
+                    <div class="p-4 space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg">Chanel N°5</h3>
+                            <p class="text-sm text-stone-500 dark:text-stone-400">Eau de Parfum</p>
+                            <p class="text-2xl font-bold text-primary mt-2">$135.00</p>
+                        </div>
+                        
+                        <div class="space-y-3 text-sm">
+                            <div>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 font-semibold uppercase mb-1">Rating</p>
+                                <div class="flex items-center gap-2">
+                                    <div class="flex text-primary text-sm">
+                                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                                    </div>
+                                    <span class="font-semibold">4.9</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 font-semibold uppercase mb-1">Scent Family</p>
+                                <p class="font-medium">Floral Aldehyde</p>
+                            </div>
+                            
+                            <div>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 font-semibold uppercase mb-1">Longevity</p>
+                                <div class="flex gap-1">
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-stone-200 dark:bg-stone-700 rounded-full"></div>
+                                </div>
+                                <p class="text-xs mt-1">8-10 hours</p>
+                            </div>
+                            
+                            <div>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 font-semibold uppercase mb-1">Sillage</p>
+                                <div class="flex gap-1">
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                </div>
+                                <p class="text-xs mt-1">Very Strong</p>
+                            </div>
+                            
+                            <div>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 font-semibold uppercase mb-1">Best For</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="px-2 py-1 bg-primary/20 rounded-full text-xs font-medium">Evening</span>
+                                    <span class="px-2 py-1 bg-primary/20 rounded-full text-xs font-medium">Formal</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full h-10 rounded-full bg-primary text-black font-bold hover:shadow-lg transition-shadow">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="w-72 bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative aspect-square">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCPjweYuYi0APLzAPOh4p_Wk2Jca7dWcoZd_1nY07rWpvVN73M2tBQqjTy-YpTTf7VsrTTBf7TtMLUbHC86rOvuq2CMttgmf7GtCYag-gQKM1MeLMyirC7_syhjaHljmADrmVGK_h6yztrNGJ03UfEJHiul9Sp-3nkXpjkY6-UuObSVCz6zfa8DtNowKscVfizBRRTEG9x0AQYrtDSQFAoQokkIaa_0-9oXN4A_g28VOp7vcwX2o-PJiIQT-wy1YEKCrLm0ePKmAHv');">
+                        </div>
+                        <button class="absolute top-3 right-3 size-8 rounded-full bg-white/90 dark:bg-black/70 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-sm">close</span>
+                        </button>
+                    </div>
+                    <div class="p-4 space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg">Dior Sauvage</h3>
+                            <p class="text-sm text-stone-500 dark:text-stone-400">Elixir</p>
+                            <p class="text-2xl font-bold text-primary mt-2">$185.00</p>
+                        </div>
+                        
+                        <div class="space-y-3 text-sm">
+                            <div>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 font-semibold uppercase mb-1">Rating</p>
+                                <div class="flex items-center gap-2">
+                                    <div class="flex text-primary text-sm">
+                                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star_half</span>
+                                    </div>
+                                    <span class="font-semibold">4.7</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 font-semibold uppercase mb-1">Scent Family</p>
+                                <p class="font-medium">Woody Aromatic</p>
+                            </div>
+                            
+                            <div>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 font-semibold uppercase mb-1">Longevity</p>
+                                <div class="flex gap-1">
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                </div>
+                                <p class="text-xs mt-1">10-12 hours</p>
+                            </div>
+                            
+                            <div>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 font-semibold uppercase mb-1">Sillage</p>
+                                <div class="flex gap-1">
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                                    <div class="h-2 flex-1 bg-stone-200 dark:bg-stone-700 rounded-full"></div>
+                                </div>
+                                <p class="text-xs mt-1">Strong</p>
+                            </div>
+                            
+                            <div>
+                                <p class="text-xs text-stone-500 dark:text-stone-400 font-semibold uppercase mb-1">Best For</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="px-2 py-1 bg-primary/20 rounded-full text-xs font-medium">Day</span>
+                                    <span class="px-2 py-1 bg-primary/20 rounded-full text-xs font-medium">Night</span>
+                                    <span class="px-2 py-1 bg-primary/20 rounded-full text-xs font-medium">Casual</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full h-10 rounded-full bg-primary text-black font-bold hover:shadow-lg transition-shadow">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Add More Button -->
+                <div class="w-72 bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
+                    <button class="flex flex-col items-center gap-3 text-stone-400 hover:text-stone-900 dark:hover:text-white transition-colors">
+                        <div class="size-16 rounded-full border-2 border-dashed border-stone-300 dark:border-stone-700 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-3xl">add</span>
+                        </div>
+                        <p class="font-semibold">Add Product</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Compare Summary -->
+        <div class="px-4 py-6">
+            <div class="bg-white dark:bg-stone-900 rounded-xl p-6 shadow-sm">
+                <h2 class="font-bold text-lg mb-4">Quick Summary</h2>
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-center justify-between">
+                        <span class="text-stone-500 dark:text-stone-400">Best Value</span>
+                        <span class="font-semibold">Chanel N°5 - $135</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-stone-500 dark:text-stone-400">Highest Rated</span>
+                        <span class="font-semibold">Chanel N°5 - 4.9★</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-stone-500 dark:text-stone-400">Best Longevity</span>
+                        <span class="font-semibold">Dior Sauvage - 12hrs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../src/js/script.js"></script>
+</body>
+</html>

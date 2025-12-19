@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUXE SCENTS - Premium Fragrances</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#23220f",
+                        "stone-900": "#1c1c0d",
+                        "stone-500": "#78716c",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem", 
+                        "lg": "2rem", 
+                        "xl": "3rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-stone-900 dark:text-white font-display antialiased selection:bg-primary selection:text-black">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- Side Menu Overlay -->
+<div id="side-menu" class="fixed inset-0 z-50 bg-black/50 opacity-0 invisible transition-all duration-300">
+<div class="absolute left-0 top-0 h-full w-80 bg-background-light dark:bg-background-dark shadow-2xl transform -translate-x-full transition-transform duration-300">
+<div class="p-6">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-xl font-bold">Menu</h2>
+<button id="close-menu" class="flex size-10 items-center justify-center rounded-full hover:bg-stone-100 dark:hover:bg-stone-800">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+</div>
+<nav class="space-y-4">
+<a href="../01-home/index.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800">
+<span class="material-symbols-outlined">home</span>
+<span>Home</span>
+</a>
+<a href="../02-shop/index.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800">
+<span class="material-symbols-outlined">storefront</span>
+<span>Shop</span>
+</a>
+<a href="../07-profile/index.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800">
+<span class="material-symbols-outlined">person</span>
+<span>Profile</span>
+</a>
+<a href="../10-reviews/index.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800">
+<span class="material-symbols-outlined">star</span>
+<span>Reviews</span>
+</a>
+<a href="../06-cart/index.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span>Cart</span>
+</a>
+</nav>
+</div>
+</div>
+</div>
+<!-- Top Navigation (Sticky) -->
+<header class="sticky top-0 z-40 flex items-center justify-between px-4 py-3 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-stone-200/50 dark:border-stone-800/50">
+<button id="open-menu" class="flex size-10 items-center justify-center rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+<h1 class="text-lg font-bold tracking-wider uppercase text-center flex-1">LUXE SCENTS</h1>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors relative">
+<span class="material-symbols-outlined text-2xl">shopping_bag</span>
+<span class="cart-count absolute top-2 right-2 size-2 bg-primary rounded-full"></span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="relative w-full p-4">
+<div class="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-xl min-h-[65vh] bg-stone-900 shadow-2xl">
+<!-- Enhanced hero with parallax effect -->
+<div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 mix-blend-overlay transition-all duration-1000 hover:scale-110" data-alt="Close up of an elegant glass perfume bottle with dramatic lighting and smoke" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlPbBonTKI37RiucyEst5pRZGoYeeTS-mCSaOtHOcHp-Us2ygrMKYfKWnYvh28ab-nIhboTv3e5FxjKwOr2NpTTDHE-HgHzrORyoTu0x23AyAH9qmghLUgqzo8a-a5SYI5hoThGJLkeyaN3VxJVHPnO-a_LwrjVwtn2LfLMi0UR7fEk-sh1h1nPIy_izkR9ijaXxQB6auDhEMxHYBzHov3oN6Ov7ITTrWCcadfKfuu9csnWXIvlX698H9Zc07MBfy6fvpujOY4wkQq");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90"></div>
+<!-- Content -->
+<div class="relative z-10 flex flex-col items-center gap-6 px-6 text-center max-w-md">
+<div class="space-y-3">
+<h2 class="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight uppercase drop-shadow-lg">
+                                Discover Your <br/><span class="text-primary">Signature</span> Scent
+                            </h2>
+<p class="text-stone-200 text-sm md:text-base font-light leading-relaxed max-w-xs mx-auto">
+                                Curated essences for the modern individual. Rare ingredients, timeless appeal.
+                            </p>
+</div>
+<div class="flex gap-3 w-full max-w-xs">
+<a href="../02-shop/index.html" class="group relative flex items-center justify-center gap-2 h-12 px-6 rounded-full bg-primary text-black text-base font-bold tracking-wide shadow-[0_0_20px_rgba(249,245,6,0.4)] transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(249,245,6,0.6)] active:scale-95 flex-1">
+<span>Shop Now</span>
+<span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a href="../04-quiz/index.html" class="group relative flex items-center justify-center gap-2 h-12 px-6 rounded-full bg-white/10 backdrop-blur-md text-white text-base font-bold tracking-wide border-2 border-white/20 transition-all hover:bg-white/20 active:scale-95">
+<span>Take Quiz</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="px-4 py-12 bg-white dark:bg-stone-900 mt-8 mx-4 rounded-xl">
+<div class="text-center max-w-md mx-auto">
+<span class="material-symbols-outlined text-4xl text-primary mb-4 inline-block">mail</span>
+<h3 class="text-2xl font-bold mb-2">Join Our Scent Society</h3>
+<p class="text-stone-500 dark:text-stone-400 text-sm mb-6">Get exclusive access to new launches, special offers, and fragrance tips.</p>
+<form class="flex gap-2">
+<input type="email" placeholder="Enter your email" class="flex-1 h-12 px-4 rounded-full bg-stone-100 dark:bg-stone-800 border-none focus:ring-2 focus:ring-primary text-sm">
+<button type="submit" class="h-12 px-6 rounded-full bg-primary text-black font-bold hover:shadow-lg transition-shadow whitespace-nowrap">
+Subscribe
+</button>
+</form>
+</div>
+</section>
+
+<!-- Benefits Grid -->
+<section class="px-4 py-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-white dark:bg-stone-900 p-6 rounded-xl text-center">
+<span class="material-symbols-outlined text-3xl text-primary mb-2 inline-block">local_shipping</span>
+<h4 class="font-bold text-sm mb-1">Free Shipping</h4>
+<p class="text-xs text-stone-500 dark:text-stone-400">Orders over $100</p>
+</div>
+<div class="bg-white dark:bg-stone-900 p-6 rounded-xl text-center">
+<span class="material-symbols-outlined text-3xl text-primary mb-2 inline-block">workspace_premium</span>
+<h4 class="font-bold text-sm mb-1">Authentic</h4>
+<p class="text-xs text-stone-500 dark:text-stone-400">100% Genuine</p>
+</div>
+<div class="bg-white dark:bg-stone-900 p-6 rounded-xl text-center">
+<span class="material-symbols-outlined text-3xl text-primary mb-2 inline-block">keyboard_return</span>
+<h4 class="font-bold text-sm mb-1">Easy Returns</h4>
+<p class="text-xs text-stone-500 dark:text-stone-400">30-day policy</p>
+</div>
+<div class="bg-white dark:bg-stone-900 p-6 rounded-xl text-center">
+<span class="material-symbols-outlined text-3xl text-primary mb-2 inline-block">support_agent</span>
+<h4 class="font-bold text-sm mb-1">24/7 Support</h4>
+<p class="text-xs text-stone-500 dark:text-stone-400">Always here</p>
+</div>
+</div>
+</section>
+
+<!-- Trending Header -->
+<section class="pt-6 px-4 pb-2 flex items-center justify-between">
+<h3 class="text-xl font-bold tracking-tight">Trending Now</h3>
+<a class="text-xs font-medium text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="../02-shop/index.html">View All</a>
+</section>
+<!-- Trending Carousel -->
+<section class="w-full">
+<div class="flex overflow-x-auto no-scrollbar gap-4 px-4 pb-8 pt-2 snap-x snap-mandatory">
+<!-- Card 1 -->
+<a href="../03-product-detail/index.html" class="flex-shrink-0 w-64 snap-center flex flex-col gap-3 group">
+<div class="relative w-full aspect-[3/4] rounded-lg overflow-hidden bg-stone-100 dark:bg-stone-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Dark glass perfume bottle on a velvet background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCERnwodGpKD_IBwzjYodgcODFKJCepzATEXzIKJO4Sn3-po9JssHAh5TPsxBlhPiv5twdRltzpUpiLsI8h7bSLlQ-Khd1gSOrmjp3xQRTixwzi8MDNH11r6Bq4YxAsF_99aPymIL6n_DI_e8EFNpnw58YREHghfXmokFCB7URVYrgAFXLVobYjqzYFIOx-N-01_Ad6rJT0_ptwdY9vcLwRkFFoRULqPEMlzNbqLr5NCu6NfFcBpde5lP13Q8fg3WUXSqAGAv7UOEsk");'>
+</div>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-2 py-1 rounded text-xs font-bold">
+                                BESTSELLER
+                            </div>
+</div>
+<div class="flex flex-col px-1">
+<div class="flex justify-between items-start">
+<h4 class="text-base font-semibold truncate pr-2">Midnight Rose</h4>
+<span class="text-primary font-bold bg-black/5 dark:bg-white/10 px-2 py-0.5 rounded text-sm">$120</span>
+</div>
+<p class="text-stone-500 dark:text-stone-400 text-xs">Floral &amp; Woody</p>
+</div>
+</a>
+<!-- Card 2 -->
+<div class="flex-shrink-0 w-64 snap-center flex flex-col gap-3 group">
+<div class="relative w-full aspect-[3/4] rounded-lg overflow-hidden bg-stone-100 dark:bg-stone-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Blue tinted perfume bottle with water splashes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAl8wnsc5UKuet6ltb4WkWbMzzLy7yoEPZ7j0brxh57gIFEtBd_BhMkIdVHkRg7V0cPTN2KQZYhI5_Tt3PDkBdFuGMRlecgtidD6eMlKqaRLWunCK5NUMDgZyXplzzMgY_bIEzG3GQVd5ZiqqeBMI70QVrfc4KYODjcelff6OeJABzzH1uqwEfTYE1NQSnw3VnCiawUprzIWQEtQtpHtr4vWuCM7Kw63lk1VBSUDN04Dp_ipXpJkzUB3L-Kvhai5JMcnZHLtr_6VnSe");'>
+</div>
+</div>
+<div class="flex flex-col px-1">
+<div class="flex justify-between items-start">
+<h4 class="text-base font-semibold truncate pr-2">Ocean Breeze</h4>
+<span class="text-stone-900 dark:text-white font-bold text-sm">$95</span>
+</div>
+<p class="text-stone-500 dark:text-stone-400 text-xs">Fresh &amp; Aquatic</p>
+</div>
+</div>
+<!-- Card 3 -->
+<a href="../03-product-detail/index.html" class="flex-shrink-0 w-64 snap-center flex flex-col gap-3 group">
+<div class="relative w-full aspect-[3/4] rounded-lg overflow-hidden bg-stone-100 dark:bg-stone-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Golden perfume bottle glowing in warm sunlight" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSkwVJi4HXa6tMw0ShVQ-tGb3Qq-X9CfPUzTwMl6Wpp8hKu2DslmfHhIv9wfNYEDDkpXCAeqTHeRShi3cVSQVNpMo8_CdE4ZybXbcWnzyoVKmGjXnmPQcrWG89w0sPpVNLNISPJPCKh7itwVQ6gJym3j4q-_VWm509quzDHLHQFHJwW7batJsPRtprbsiGvSjvTC7idZMBPqE-vnaIxOIXQpJAF5XiofWVee87T8ym1GR9fFHlUVZJS0h_IY1OH2EdUFrM1gtQmwsy");'>
+</div>
+</div>
+<div class="flex flex-col px-1">
+<div class="flex justify-between items-start">
+<h4 class="text-base font-semibold truncate pr-2">Golden Amber</h4>
+<span class="text-stone-900 dark:text-white font-bold text-sm">$150</span>
+</div>
+<p class="text-stone-500 dark:text-stone-400 text-xs">Oriental &amp; Spicy</p>
+</div>
+</a>
+</div>
+</section>
+<!-- Collections Grid Teaser -->
+<section class="px-4 py-6">
+<div class="grid grid-cols-2 gap-3 h-64">
+<div class="relative col-span-1 rounded-lg overflow-hidden group cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Abstract floral pattern background representing 'For Her' collection" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYsi2OhrYnkv91sRJOp4ZWZVnnyHtrdrSDEgm76Tq5xve24T9QKf3AaoFBm33qKxMotpyU2pv8_igEGKw_TmwPAuWdpz5mo_CfMc4A8wOhXstd2THhPfLJ4dgqZtOvWgxnEh5PV3QM8YY_TJ8lMcqrDy6hs7R8mbW0y41pa25MLEf2cbO6GbpToT33ZJJ9859ZdXm0buQcjxP_39UyP4pVUKRVagK9CzvqVYyw3FzS0iSB5N-d2XV_RKi8KjANFPv7ZFq90-MNl9Ov");'>
+</div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-white font-bold text-lg">For Her</p>
+</div>
+</div>
+<div class="relative col-span-1 rounded-lg overflow-hidden group cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Abstract minimal geometric background representing 'For Him' collection" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCg2y2dgdwBpFt2_Bf9t_AFjmm_LcMJxZTTPXyCBKDbcGPpDSJIzTrRFxpWA8l0-T_2Bge4gSkwwTfSFRoa9YokZ5Vrk5cKtL51h6jraIZohJz6BVlZIVEOBVMb_b1OQHb5gDtw8OJHJf6bxzMkvq5e_PA4QeuH0ZJxbX905bn7puwq5C0Iwg5uTK87lRVrq8G2ykFa0GIS4NGsfs8KFXVEo19gTp4b8GXW9rj9JDsiVphaAtf_mSjijkDHVGJghe2w4IxPpWLzLMiO");'>
+</div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-white font-bold text-lg">For Him</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer for Desktop -->
+<footer class="hidden md:block bg-stone-900 text-white py-8 px-4">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h3 class="font-bold text-lg mb-4">LUXE SCENTS</h3>
+<p class="text-stone-300 text-sm">Premium fragrances for the modern individual. Curated essences with timeless appeal.</p>
+</div>
+<div>
+<h4 class="font-semibold mb-4">Shop</h4>
+<ul class="space-y-2 text-sm text-stone-300">
+<li><a href="../02-shop/index.html" class="hover:text-primary">All Products</a></li>
+<li><a href="../02-shop/index.html" class="hover:text-primary">Women</a></li>
+<li><a href="../02-shop/index.html" class="hover:text-primary">Men</a></li>
+<li><a href="../02-shop/index.html" class="hover:text-primary">Unisex</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold mb-4">Support</h4>
+<ul class="space-y-2 text-sm text-stone-300">
+<li><a href="#" class="hover:text-primary">Contact Us</a></li>
+<li><a href="#" class="hover:text-primary">Shipping Info</a></li>
+<li><a href="#" class="hover:text-primary">Returns</a></li>
+<li><a href="#" class="hover:text-primary">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold mb-4">Follow Us</h4>
+<div class="flex space-x-4">
+<a href="#" class="text-stone-300 hover:text-primary"><span class="material-symbols-outlined">share</span></a>
+<a href="#" class="text-stone-300 hover:text-primary"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+</div>
+<div class="border-t border-stone-700 mt-8 pt-8 text-center text-stone-400 text-sm">
+<p>&copy; 2024 LUXE SCENTS. All rights reserved.</p>
+</div>
+</footer>
+<!-- Floating Bottom Navigation -->
+<div class="fixed bottom-6 inset-x-4 z-50 md:hidden">
+<nav class="mx-auto max-w-[360px] bg-background-light/90 dark:bg-stone-900/90 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-full shadow-2xl shadow-black/20 p-2">
+<ul class="flex items-center justify-between px-2">
+<li class="flex-1">
+<a class="flex flex-col items-center justify-center gap-1 p-2 rounded-full text-stone-900 dark:text-white group" href="#">
+<div class="relative">
+<span class="material-symbols-outlined filled text-2xl group-hover:scale-110 transition-transform">home</span>
+<span class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+</a>
+</li>
+<li class="flex-1">
+<a class="flex flex-col items-center justify-center gap-1 p-2 rounded-full text-stone-400 hover:text-stone-900 dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">storefront</span>
+</a>
+</li>
+<li class="flex-1">
+<a class="flex flex-col items-center justify-center gap-1 p-2 rounded-full text-stone-400 hover:text-stone-900 dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">info</span>
+</a>
+</li>
+<li class="flex-1">
+<a class="flex flex-col items-center justify-center gap-1 p-2 rounded-full text-stone-400 hover:text-stone-900 dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">mail</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<script src="../src/js/script.js"></script>
+</body></html>

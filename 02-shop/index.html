@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Discovery</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#23220f",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2d2c1b",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem", 
+                        "2xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Spline Sans", sans-serif;
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen pb-24 text-zinc-900 dark:text-white shop-page">
+<!-- Sticky Header Section -->
+<div class="sticky top-0 z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md transition-colors duration-300">
+<!-- Top App Bar -->
+<div class="flex items-center justify-between px-4 py-3">
+<a href="../01-home/index.html" class="flex size-10 items-center justify-center rounded-full active:bg-zinc-200 dark:active:bg-zinc-800 transition-colors">
+<span class="material-symbols-outlined text-zinc-900 dark:text-white" style="font-size: 24px;">arrow_back</span>
+</a>
+<h1 class="text-xl font-bold leading-tight tracking-tight text-center flex-1">Discover Scents</h1>
+<a href="../06-cart/index.html" class="relative flex size-10 items-center justify-center rounded-full active:bg-zinc-200 dark:active:bg-zinc-800 transition-colors">
+<span class="material-symbols-outlined text-zinc-900 dark:text-white" style="font-size: 24px;">shopping_cart</span>
+<span class="absolute top-2 right-1.5 flex h-2.5 w-2.5 items-center justify-center rounded-full bg-primary ring-2 ring-background-light dark:ring-background-dark"></span>
+</a>
+</div>
+<!-- Search Bar -->
+<div class="px-4 pb-2">
+<div class="relative flex h-12 w-full items-center overflow-hidden rounded-full bg-surface-light dark:bg-surface-dark shadow-sm border border-zinc-200 dark:border-zinc-800/50">
+<div class="flex h-full w-12 items-center justify-center pl-2">
+<span class="material-symbols-outlined text-zinc-400" style="font-size: 24px;">search</span>
+</div>
+<input class="h-full w-full border-none bg-transparent px-2 text-base font-normal text-zinc-900 dark:text-white placeholder:text-zinc-400 focus:outline-none focus:ring-0" placeholder="Search for 'Woody' or 'Chanel'..." type="text"/>
+<button class="mr-1.5 flex h-9 w-9 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800">
+<span class="material-symbols-outlined text-zinc-500" style="font-size: 20px;">mic</span>
+</button>
+</div>
+</div>
+<!-- Filter Chips (Horizontal Scroll) -->
+<div class="flex gap-2 overflow-x-auto px-4 py-3 no-scrollbar">
+<!-- Active Chip -->
+<button class="filter-chip active flex h-9 min-w-max shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-4 shadow-sm transition-transform active:scale-95">
+<span class="material-symbols-outlined text-black" style="font-size: 18px;">grid_view</span>
+<span class="text-sm font-bold text-black">All</span>
+</button>
+<!-- Inactive Chips -->
+<button class="filter-chip flex h-9 min-w-max shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-zinc-200 dark:border-zinc-700 px-4 transition-transform active:scale-95 active:bg-zinc-100 dark:active:bg-zinc-700">
+<span class="material-symbols-outlined text-zinc-600 dark:text-zinc-300" style="font-size: 18px;">female</span>
+<span class="text-sm font-medium text-zinc-600 dark:text-zinc-300">Women</span>
+</button>
+<button class="filter-chip flex h-9 min-w-max shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-zinc-200 dark:border-zinc-700 px-4 transition-transform active:scale-95 active:bg-zinc-100 dark:active:bg-zinc-700">
+<span class="material-symbols-outlined text-zinc-600 dark:text-zinc-300" style="font-size: 18px;">male</span>
+<span class="text-sm font-medium text-zinc-600 dark:text-zinc-300">Men</span>
+</button>
+<button class="filter-chip flex h-9 min-w-max shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-zinc-200 dark:border-zinc-700 px-4 transition-transform active:scale-95 active:bg-zinc-100 dark:active:bg-zinc-700">
+<span class="material-symbols-outlined text-zinc-600 dark:text-zinc-300" style="font-size: 18px;">wc</span>
+<span class="text-sm font-medium text-zinc-600 dark:text-zinc-300">Unisex</span>
+</button>
+<button class="filter-chip flex h-9 min-w-max shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-zinc-200 dark:border-zinc-700 px-4 transition-transform active:scale-95 active:bg-zinc-100 dark:active:bg-zinc-700">
+<span class="material-symbols-outlined text-zinc-600 dark:text-zinc-300" style="font-size: 18px;">card_giftcard</span>
+<span class="text-sm font-medium text-zinc-600 dark:text-zinc-300">Gifts</span>
+</button>
+<!-- Added more filter options -->
+<button class="filter-chip flex h-9 min-w-max shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-zinc-200 dark:border-zinc-700 px-4 transition-transform active:scale-95 active:bg-zinc-100 dark:active:bg-zinc-700">
+<span class="material-symbols-outlined text-zinc-600 dark:text-zinc-300" style="font-size: 18px;">local_offer</span>
+<span class="text-sm font-medium text-zinc-600 dark:text-zinc-300">Sale</span>
+</button>
+<button class="filter-chip flex h-9 min-w-max shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-zinc-200 dark:border-zinc-700 px-4 transition-transform active:scale-95 active:bg-zinc-100 dark:active:bg-zinc-700">
+<span class="material-symbols-outlined text-zinc-600 dark:text-zinc-300" style="font-size: 18px;">new_releases</span>
+<span class="text-sm font-medium text-zinc-600 dark:text-zinc-300">New</span>
+</button>
+</div>
+</div>
+
+<!-- Added sorting and view options -->
+<div class="flex items-center justify-between px-4 py-3 border-b border-zinc-200/50 dark:border-zinc-800/50">
+<div class="flex items-center gap-2">
+<span class="text-sm text-zinc-500 dark:text-zinc-400">2,847 products</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800">
+<span class="material-symbols-outlined text-sm">swap_vert</span>
+<span>Sort</span>
+</button>
+<button class="flex items-center justify-center size-8 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800">
+<span class="material-symbols-outlined text-sm">apps</span>
+</button>
+</div>
+</div>
+
+<!-- Product Grid -->
+<div class="grid grid-cols-2 gap-x-4 gap-y-6 px-4 pt-2">
+<!-- Product 1 -->
+<a href="../03-product-detail/index.html" class="product-card group relative flex flex-col gap-3" data-category="women">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+<img alt="Chanel No 5 Perfume" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Chanel No 5 Perfume bottle on light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByESiO8Hossn1Zv3h3WA90FrF71O1MU_IinUCUKbuxYFS_HfQdcRjdQJG9fcEQrR1tUUD0l-xYHpZvB_73tBwj-K2_B-Bz3UU4dEqdqxUFrXz5qsgf2CAMpolCnCPbELvNX8TLzmLrt0DpwdStiUNSbifcIRVkQzP5XOcTx49K8Np2WbrqzfsMsOKmSsQFqZV_KcOfUmSuD_w8sB3hCEFqSCT9nPDiFHK5GIxTGjK8AGN51ueTnskrqg2DGKSCEFTvDQfnSmIrf5yW"/>
+<!-- Add Button Overlay -->
+<button class="add-to-cart absolute bottom-3 right-3 flex h-11 w-11 items-center justify-center rounded-full bg-primary text-black shadow-lg shadow-primary/20 transition-transform active:scale-90 hover:scale-105">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+</div>
+<div class="flex flex-col px-1">
+<span class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Chanel</span>
+<h3 class="text-base font-bold text-zinc-900 dark:text-white leading-tight mt-0.5">N°5 Eau de Parfum</h3>
+<span class="mt-1.5 text-base font-bold text-zinc-900 dark:text-white">$135.00</span>
+</div>
+</a>
+<!-- Product 2 -->
+<div class="product-card group relative flex flex-col gap-3" data-category="men">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+<img alt="Dior Sauvage" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Dior Sauvage bottle on dark moody background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCPjweYuYi0APLzAPOh4p_Wk2Jca7dWcoZd_1nY07rWpvVN73M2tBQqjTy-YpTTf7VsrTTBf7TtMLUbHC86rOvuq2CMttgmf7GtCYag-gQKM1MeLMyirC7_syhjaHljmADrmVGK_h6yztrNGJ03UfEJHiul9Sp-3nkXpjkY6-UuObSVCz6zfa8DtNowKscVfizBRRTEG9x0AQYrtDSQFAoQokkIaa_0-9oXN4A_g28VOp7vcwX2o-PJiIQT-wy1YEKCrLm0ePKmAHv"/>
+<button class="add-to-cart absolute bottom-3 right-3 flex h-11 w-11 items-center justify-center rounded-full bg-primary text-black shadow-lg shadow-primary/20 transition-transform active:scale-90 hover:scale-105">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+</div>
+<div class="flex flex-col px-1">
+<span class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Dior</span>
+<h3 class="text-base font-bold text-zinc-900 dark:text-white leading-tight mt-0.5">Sauvage Elixir</h3>
+<span class="mt-1.5 text-base font-bold text-zinc-900 dark:text-white">$185.00</span>
+</div>
+</div>
+<!-- Product 3 -->
+<a href="../03-product-detail/index.html" class="product-card group relative flex flex-col gap-3" data-category="women">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+<img alt="Tom Ford Black Orchid" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Tom Ford Black Orchid bottle close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhb7_Kr_X8R6l7jTgx5_A8MD10yUp8mXy-fPCyjhyFxtppkmuHwsdHTewBtj3W_mjj1tsPwQPWF9EEM-4HY52ZQETDze5kfXiNHaut9Mp2x7L-M-RjPoD33--I5uDDp11KTu8f2F2KjR8gpatBAbimJBxIjEdjUg4bI_T7P2m9OpqqkwUGAwf7RcsM058gJpvdbYbaDHwtN3iiaYH4JraBvOBj5Ha1CHNUpY-j6ltv1ehOyIFSCpsnI8yy_BZQEfFlBVTDuJI-GJgu"/>
+<button class="add-to-cart absolute bottom-3 right-3 flex h-11 w-11 items-center justify-center rounded-full bg-primary text-black shadow-lg shadow-primary/20 transition-transform active:scale-90 hover:scale-105">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+</div>
+<div class="flex flex-col px-1">
+<span class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Tom Ford</span>
+<h3 class="text-base font-bold text-zinc-900 dark:text-white leading-tight mt-0.5">Black Orchid</h3>
+<span class="mt-1.5 text-base font-bold text-zinc-900 dark:text-white">$150.00</span>
+</div>
+</a>
+<!-- Product 4 -->
+<a href="../03-product-detail/index.html" class="product-card group relative flex flex-col gap-3" data-category="unisex">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+<img alt="Le Labo Santal 33" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Le Labo Santal 33 minimal bottle design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQA2ehaGSTpi7dShMg6VvIzFZCDr7c_-ElY3oZIxRxt3fUXketOoCL49BIK6fA0ruiPS8HrqF5oMIkXEO6PnKrVp6zBdMAPP-CXtX9cXJTzSkdasgDBKLpcOeytywM7XZpFJNVeZ98_-XSDyUVBEXvf7EX1yxZklO_B8YIv8ycsy4fwgRPVCbzCT2-_toBvn4hKrtlhXpcn_R3jXH5iiMCn8uB6O_lmsacJtw8QtCM27i7rQJFlrysxl9VE4V9b1Y5mwshD2lzDrDf"/>
+<button class="add-to-cart absolute bottom-3 right-3 flex h-11 w-11 items-center justify-center rounded-full bg-primary text-black shadow-lg shadow-primary/20 transition-transform active:scale-90 hover:scale-105">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+</div>
+<div class="flex flex-col px-1">
+<span class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Le Labo</span>
+<h3 class="text-base font-bold text-zinc-900 dark:text-white leading-tight mt-0.5">Santal 33</h3>
+<span class="mt-1.5 text-base font-bold text-zinc-900 dark:text-white">$215.00</span>
+</div>
+</a>
+<!-- Product 5 -->
+<a href="../03-product-detail/index.html" class="product-card group relative flex flex-col gap-3" data-category="women">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+<img alt="Flowerbomb" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Viktor &amp; Rolf Flowerbomb pink grenade shaped bottle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeJzuNzDslDaBLFvHZpIpEXvQkRsFctPM7hX13Pdn97tLGI1BU_bV70rFTGsp_WhBinctsYxKiwL2fCTLyk8uliBsEXlMYF2Qyt3XYCt6d1zgofrZ63Rf5lnnzKHr_c9qkoVPnpBM9vtUd5SmdaZqr3SztSoUcqRfsdaA2CRlh52CVsG4E1vJfcvB5Zsk3qToP0FrFuPTvBj4hiF3G_jh4i1qNKx3bCaKRjz-WIvT8FXfcXrtp4B5pen4fblpZVoioYJdnA9MdJc0B"/>
+<button class="absolute bottom-3 right-3 flex h-11 w-11 items-center justify-center rounded-full bg-primary text-black shadow-lg shadow-primary/20 transition-transform active:scale-90 hover:scale-105">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+</div>
+<div class="flex flex-col px-1">
+<span class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Viktor&amp;Rolf</span>
+<h3 class="text-base font-bold text-zinc-900 dark:text-white leading-tight mt-0.5">Flowerbomb</h3>
+<span class="mt-1.5 text-base font-bold text-zinc-900 dark:text-white">$115.00</span>
+</div>
+</a>
+<!-- Product 6 -->
+<a href="../03-product-detail/index.html" class="product-card group relative flex flex-col gap-3" data-category="men">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+<img alt="Creed Aventus" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Creed Aventus masculine bottle with silver accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBleX5IBxhfu2BP1IbK7hLajMZdQIYjiprD8Jg3VBjK1UCUQT9Prg7ffXJJu13MIyYZ821mbk_QT0INho8UIW7g74jxS1_C6fMx2VbZQ0HSAg1RwpBWheLuudwAfW8-5eeexrWUSFSd-yIoy_rWKDHKr8VoBsCJVuUGnIWXDPLUkl6Ea3NcKnKhk_SOiBX6_pDcRf5EK2uR8_Rn7Y8AhqsRghzBlyQ-73oWFFw2KYGdlQ6arE4SqT1H0VfwUy-CYhxdH0lwcAMUAHXr"/>
+<button class="absolute bottom-3 right-3 flex h-11 w-11 items-center justify-center rounded-full bg-primary text-black shadow-lg shadow-primary/20 transition-transform active:scale-90 hover:scale-105">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+</div>
+<div class="flex flex-col px-1">
+<span class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Creed</span>
+<h3 class="text-base font-bold text-zinc-900 dark:text-white leading-tight mt-0.5">Aventus</h3>
+<span class="mt-1.5 text-base font-bold text-zinc-900 dark:text-white">$365.00</span>
+</div>
+</a>
+</div>
+<!-- Floating Action Button for Filters -->
+<div class="fixed bottom-24 right-4 z-40">
+<button class="flex h-14 items-center justify-center gap-2 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-black px-6 shadow-xl transition-transform active:scale-95">
+<span class="material-symbols-outlined">tune</span>
+<span class="text-base font-bold">Filters</span>
+</button>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 z-50 w-full border-t border-zinc-200 dark:border-zinc-800 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-lg pb-safe">
+<div class="flex h-20 items-center justify-around px-2">
+<a href="../01-home/index.html" class="group flex flex-col items-center gap-1 p-2">
+<div class="flex h-8 w-16 items-center justify-center rounded-full bg-primary/20 group-hover:bg-primary/30">
+<span class="material-symbols-outlined text-zinc-900 dark:text-white font-bold filled">home</span>
+</div>
+<span class="text-[10px] font-semibold text-zinc-900 dark:text-white">Home</span>
+</a>
+<a href="../07-profile/index.html" class="group flex flex-col items-center gap-1 p-2">
+<div class="flex h-8 w-16 items-center justify-center rounded-full bg-transparent group-hover:bg-zinc-100 dark:group-hover:bg-zinc-800">
+<span class="material-symbols-outlined text-zinc-500 dark:text-zinc-400">search</span>
+</div>
+<span class="text-[10px] font-medium text-zinc-500 dark:text-zinc-400">Search</span>
+</button>
+<a href="../06-cart/index.html" class="group flex flex-col items-center gap-1 p-2">
+<div class="flex h-8 w-16 items-center justify-center rounded-full bg-transparent group-hover:bg-zinc-100 dark:group-hover:bg-zinc-800">
+<span class="material-symbols-outlined text-zinc-500 dark:text-zinc-400">shopping_bag</span>
+</div>
+<span class="text-[10px] font-medium text-zinc-500 dark:text-zinc-400">Cart</span>
+</a>
+<button class="group flex flex-col items-center gap-1 p-2">
+<div class="flex h-8 w-16 items-center justify-center rounded-full bg-transparent group-hover:bg-zinc-100 dark:group-hover:bg-zinc-800">
+<span class="material-symbols-outlined text-zinc-500 dark:text-zinc-400">person</span>
+</div>
+<span class="text-[10px] font-medium text-zinc-500 dark:text-zinc-400">Profile</span>
+</a>
+</div>
+</div>
+<!-- Spacer for safe area and fixed elements -->
+<div class="h-10"></div>
+<script src="../src/js/script.js"></script>
+</body></html>

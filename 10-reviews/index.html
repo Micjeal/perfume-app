@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews - LUXE SCENTS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#23220f",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-stone-900 dark:text-white font-display reviews-page">
+    <div class="min-h-screen pb-24">
+        <!-- Header -->
+        <header class="sticky top-0 z-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-stone-200/50 dark:border-stone-800/50">
+            <div class="flex items-center justify-between px-4 py-3">
+                <a href="../01-home/index.html" class="flex size-10 items-center justify-center rounded-full hover:bg-stone-100 dark:hover:bg-stone-800">
+                <span class="material-symbols-outlined text-2xl">arrow_back</span>
+                </a>
+                <h1 class="text-lg font-bold tracking-wider uppercase">Reviews</h1>
+                <button class="flex size-10 items-center justify-center rounded-full hover:bg-stone-100 dark:hover:bg-stone-800">
+                    <span class="material-symbols-outlined text-2xl">filter_list</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Rating Summary -->
+        <div class="px-4 py-6">
+            <div class="bg-white dark:bg-stone-900 rounded-xl p-6 shadow-sm">
+                <div class="flex items-start gap-6">
+                    <div class="text-center">
+                        <p class="text-5xl font-bold">4.8</p>
+                        <div class="flex text-primary my-2 justify-center">
+                            <span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1;">star_half</span>
+                        </div>
+                        <p class="text-sm text-stone-500 dark:text-stone-400">2,847 reviews</p>
+                    </div>
+                    
+                    <div class="flex-1 space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs w-8">5★</span>
+                            <div class="flex-1 h-2 bg-stone-200 dark:bg-stone-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-primary rounded-full" style="width: 75%"></div>
+                            </div>
+                            <span class="text-xs w-8 text-right">2,135</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs w-8">4★</span>
+                            <div class="flex-1 h-2 bg-stone-200 dark:bg-stone-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-primary rounded-full" style="width: 15%"></div>
+                            </div>
+                            <span class="text-xs w-8 text-right">427</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs w-8">3★</span>
+                            <div class="flex-1 h-2 bg-stone-200 dark:bg-stone-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-primary rounded-full" style="width: 6%"></div>
+                            </div>
+                            <span class="text-xs w-8 text-right">171</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs w-8">2★</span>
+                            <div class="flex-1 h-2 bg-stone-200 dark:bg-stone-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-primary rounded-full" style="width: 3%"></div>
+                            </div>
+                            <span class="text-xs w-8 text-right">85</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs w-8">1★</span>
+                            <div class="flex-1 h-2 bg-stone-200 dark:bg-stone-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-primary rounded-full" style="width: 1%"></div>
+                            </div>
+                            <span class="text-xs w-8 text-right">29</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Tags -->
+        <div class="px-4 pb-4 flex gap-2 overflow-x-auto">
+            <button class="px-4 py-2 bg-primary text-black rounded-full text-sm font-semibold whitespace-nowrap">
+                All (2,847)
+            </button>
+            <button class="px-4 py-2 bg-white dark:bg-stone-900 text-stone-900 dark:text-white rounded-full text-sm font-medium whitespace-nowrap border border-stone-200 dark:border-stone-700">
+                With Photos (324)
+            </button>
+            <button class="px-4 py-2 bg-white dark:bg-stone-900 text-stone-900 dark:text-white rounded-full text-sm font-medium whitespace-nowrap border border-stone-200 dark:border-stone-700">
+                Verified (2,210)
+            </button>
+        </div>
+
+        <!-- Reviews List -->
+        <div class="px-4 space-y-4">
+            <!-- Review 1 -->
+            <div class="bg-white dark:bg-stone-900 rounded-xl p-5 shadow-sm">
+                <div class="flex items-start justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="size-10 rounded-full bg-stone-200 dark:bg-stone-700 bg-cover bg-center"
+                             style="background-image: url('https://i.pravatar.cc/100?img=1');"></div>
+                        <div>
+                            <p class="font-semibold">Emma Richardson</p>
+                            <p class="text-xs text-stone-500 dark:text-stone-400">2 days ago</p>
+                        </div>
+                    </div>
+                    <div class="flex text-primary text-sm">
+                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                </div>
+                <p class="text-sm leading-relaxed mb-3">Absolutely stunning fragrance! The longevity is incredible - I can still smell it on my clothes the next day. The scent evolves beautifully throughout the day.</p>
+                <div class="flex gap-2 mb-3">
+                    <div class="size-16 rounded-lg bg-stone-100 dark:bg-stone-800 bg-cover bg-center"
+                         style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALM0J1flL1J30bnYMo0vNmdyNXnOSmwyCf_167Nc4Ztg13BydZFkv0IPCV1dYOlA8W8HJQ6ZWptR_CZhryzYxWF2IYODzCyeKHYYNkcoSCPf3qNYFtloe3WJVW_a2fp2hqoZehfvL84kPNSEql75RMw-beHSDit08hcX9bDHmlsXDfhGanlgmczF5nbxoafqjotpMGxT5s0PzjGlHI3EftYrvpfF90v-C_yhPNMSvvCfflErwbMF5g5-ih2ZRQGSRGhU4NPs7nJWF3');"></div>
+                    <div class="size-16 rounded-lg bg-stone-100 dark:bg-stone-800 bg-cover bg-center"
+                         style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDE7bKhUv98zliAmGdGDhFnPPHM1jHfLAv2ytmDTa_CFfweq7ux0E8vlNxa1aYOlcJc0RW4gdjvlGkqPFb9CnsqppRLIL7gawf5j7dmEG4WW1v_uN7mSBlMqtXpciZez4AYICAPKGPXDeLG6NWbpZ_JAZSh_nIY-2teRGpJDORA_Nc32J6wYfY22iFE-FeW4BrBNNR_ytKFiVXk5qcQc5y7Rwu5K4wg__Z5Pb8-ckwvkjR8NZhCJys1AB7SwGZbfJkdF4WoJQ_HezBk');"></div>
+                </div>
+                <div class="flex items-center gap-4 text-xs text-stone-500 dark:text-stone-400">
+                    <button class="flex items-center gap-1 hover:text-stone-900 dark:hover:text-white">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">thumb_up</span>
+                        <span>Helpful (24)</span>
+                    </button>
+                    <span class="px-2 py-0.5 bg-primary/20 text-primary rounded-full font-semibold">VERIFIED</span>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-white dark:bg-stone-900 rounded-xl p-5 shadow-sm">
+                <div class="flex items-start justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="size-10 rounded-full bg-stone-200 dark:bg-stone-700 bg-cover bg-center"
+                             style="background-image: url('https://i.pravatar.cc/100?img=12');"></div>
+                        <div>
+                            <p class="font-semibold">Michael Chen</p>
+                            <p class="text-xs text-stone-500 dark:text-stone-400">1 week ago</p>
+                        </div>
+                    </div>
+                    <div class="flex text-primary text-sm">
+                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-size: 16px;">star</span>
+                    </div>
+                </div>
+                <p class="text-sm leading-relaxed mb-3">Great scent for the office. Not too overpowering but definitely noticeable. I've received multiple compliments already. The only downside is the price point, but the quality justifies it.</p>
+                <div class="flex items-center gap-4 text-xs text-stone-500 dark:text-stone-400">
+                    <button class="flex items-center gap-1 hover:text-stone-900 dark:hover:text-white">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">thumb_up</span>
+                        <span>Helpful (18)</span>
+                    </button>
+                    <span class="px-2 py-0.5 bg-primary/20 text-primary rounded-full font-semibold">VERIFIED</span>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-white dark:bg-stone-900 rounded-xl p-5 shadow-sm">
+                <div class="flex items-start justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="size-10 rounded-full bg-stone-200 dark:bg-stone-700 bg-cover bg-center"
+                             style="background-image: url('https://i.pravatar.cc/100?img=5');"></div>
+                        <div>
+                            <p class="font-semibold">Sophie Anderson</p>
+                            <p class="text-xs text-stone-500 dark:text-stone-400">2 weeks ago</p>
+                        </div>
+                    </div>
+                    <div class="flex text-primary text-sm">
+                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined fill-current" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                </div>
+                <p class="text-sm leading-relaxed mb-3">My new signature scent! I love how sophisticated yet approachable this fragrance is. Perfect for both day and evening wear. The packaging is also gorgeous.</p>
+                <div class="flex items-center gap-4 text-xs text-stone-500 dark:text-stone-400">
+                    <button class="flex items-center gap-1 hover:text-stone-900 dark:hover:text-white">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">thumb_up</span>
+                        <span>Helpful (31)</span>
+                    </button>
+                    <span class="px-2 py-0.5 bg-primary/20 text-primary rounded-full font-semibold">VERIFIED</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Write Review Button -->
+        <div class="fixed bottom-6 right-6 z-50">
+            <button class="size-14 rounded-full bg-primary text-black shadow-xl flex items-center justify-center hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-2xl">edit</span>
+            </button>
+        </div>
+    </div>
+<script src="../src/js/script.js"></script>
+</body>
+</html>

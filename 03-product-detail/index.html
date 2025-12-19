@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Perfume Product Details</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#23220f",
+                        "text-main": "#1c1c0d",
+                        "text-muted": "#9e9d47",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem", 
+                        "lg": "2rem", 
+                        "xl": "3rem", 
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft": "0 10px 40px -10px rgba(0,0,0,0.05)"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-background-light font-display transition-colors duration-300 product-detail-page">
+<!-- Sticky Top Bar -->
+<div class="fixed top-0 left-0 w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md transition-all duration-300">
+<div class="flex items-center justify-between px-4 py-4 max-w-md mx-auto w-full">
+<a href="../02-shop/index.html" class="flex items-center justify-center size-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-text-main dark:text-background-light" style="font-size: 24px;">arrow_back</span>
+</a>
+<div class="flex items-center gap-2">
+<a href="../06-cart/index.html" class="relative flex items-center justify-center size-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-text-main dark:text-background-light" style="font-size: 24px;">shopping_bag</span>
+<span class="cart-count absolute top-2 right-2 size-2 bg-primary rounded-full ring-2 ring-background-light dark:ring-background-dark"></span>
+</a>
+</div>
+</div>
+</div>
+<!-- Main Scrollable Content -->
+<main class="relative flex flex-col w-full min-h-screen pb-32 max-w-md mx-auto overflow-x-hidden">
+<!-- Hero Section -->
+<div class="pt-20 px-4 flex flex-col gap-6">
+<!-- Main Image -->
+<div class="relative w-full aspect-[3/4] rounded-lg overflow-hidden bg-white dark:bg-white/5 shadow-soft group">
+<div class="main-image absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" data-alt="Elegant glass perfume bottle with golden liquid on minimal background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALM0J1flL1J30bnYMo0vNmdyNXnOSmwyCf_167Nc4Ztg13BydZFkv0IPCV1dYOlA8W8HJQ6ZWptR_CZhryzYxWF2IYODzCyeKHYYNkcoSCPf3qNYFtloe3WJVW_a2fp2hqoZehfvL84kPNSEql75RMw-beHSDit08hcX9bDHmlsXDfhGanlgmczF5nbxoafqjotpMGxT5s0PzjGlHI3EftYrvpfF90v-C_yhPNMSvvCfflErwbMF5g5-ih2ZRQGSRGhU4NPs7nJWF3');"></div>
+<!-- Zoom Hint -->
+<div class="absolute bottom-4 right-4 bg-background-light/50 dark:bg-black/30 backdrop-blur-sm p-2 rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-text-main dark:text-white text-sm">zoom_in</span>
+</div>
+</div>
+<!-- Thumbnails Gallery -->
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+<button class="thumbnail-btn active shrink-0 size-20 rounded-lg overflow-hidden border-2 border-primary p-0.5">
+<div class="w-full h-full rounded-[0.8rem] bg-cover bg-center" data-alt="Main perfume bottle front view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDE7bKhUv98zliAmGdGDhFnPPHM1jHfLAv2ytmDTa_CFfweq7ux0E8vlNxa1aYOlcJc0RW4gdjvlGkqPFb9CnsqppRLIL7gawf5j7dmEG4WW1v_uN7mSBlMqtXpciZez4AYICAPKGPXDeLG6NWbpZ_JAZSh_nIY-2teRGpJDORA_Nc32J6wYfY22iFE-FeW4BrBNNR_ytKFiVXk5qcQc5y7Rwu5K4wg__Z5Pb8-ckwvkjR8NZhCJys1AB7SwGZbfJkdF4WoJQ_HezBk');"></div>
+</button>
+<button class="thumbnail-btn shrink-0 size-20 rounded-lg overflow-hidden border-2 border-transparent opacity-60 hover:opacity-100 transition-all">
+<div class="w-full h-full rounded-[0.8rem] bg-cover bg-center" data-alt="Perfume bottle lifestyle shot on marble" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3d2GQzzgLLQr8DkaWDVv7GUipADGMDkA8x8cyZq5h-zJnE2CGctqneXsL8qoapYX-3ou2_DVKFgURvmQQEW7ciX6yFfQaRcvABck3M1oBq_x-thnw-0dJXZL2so-VZjxgsQOSbPiBnXQDat6_hhZ-Qn_OLx_cR7Zx7y_b0Dd3LO-ll7K4iJdeuSLIe3KbuCIPThLp-45yGo7aptv4j0VONIV8JqYsQfznhlGgqNTHKx4CuMFUjyLu_xHn_ezPJYpRJdYjVhQA-gRL');"></div>
+</button>
+<button class="thumbnail-btn shrink-0 size-20 rounded-lg overflow-hidden border-2 border-transparent opacity-60 hover:opacity-100 transition-all">
+<div class="w-full h-full rounded-[0.8rem] bg-cover bg-center" data-alt="Close up of perfume packaging texture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBn8ualfyyN5c1OBhiIbLm3Z3gxgkQoz6NPUC-4ydKir0J5f1DXFDZA39NMqsIdHdf6O4kaarDdY7cDybe_rdduyKfkYxzBThD03E03OQVB681h_HQwRrpW-BQqp50t-UFJv9jVDK3BrnMAYN4TgxJPpWVHqPCGuWGvVDy6V5oJKIREd8tfJchXtEYYB7IyRQ46lVvqyOf3-B0OjfBYSZeQF86cLT3ZpkYiX-xUqGDTdlWh2P0DWTpQU5ZBxRn-JqXVbH1wVRUU7kOa');"></div>
+</button>
+<button class="thumbnail-btn shrink-0 size-20 rounded-lg overflow-hidden border-2 border-transparent opacity-60 hover:opacity-100 transition-all">
+<div class="w-full h-full rounded-[0.8rem] bg-cover bg-center" data-alt="Abstract yellow floral composition" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJNSPshtRa3TDjNBAP2aBFzEsOOz70fx8-vDRjw26OosRfU4_uKI4lXAAvHP-UirJEkhhhZ1Z49qkPu4Yd6qDC-kcDZD5GXMTiaXSXXVYX-mQpkDKwiLceurg96Rcpig0jpuRpDwr7aDvR8_0zYpcGM2V3bsiv_WsGn36hjK-g-KchEJwFtwSE8IACgqzwQEdEeI_xAbgHeEVjZSYmTcrjimGyzXgp4nmQaVvcNUCVzQ62izJTvUbDVQE6jAv6CY95KbuoLZr8MQ3d');"></div>
+</button>
+</div>
+</div>
+<!-- Product Info Block -->
+<div class="px-4 pt-6 pb-2">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<p class="text-text-muted dark:text-white/60 text-xs font-bold tracking-widest uppercase">Luxe Parfumerie</p>
+<h1 class="text-text-main dark:text-background-light text-3xl font-bold leading-tight tracking-tight">Ethereal Citron</h1>
+</div>
+<div class="flex flex-col items-end pt-1">
+<h2 class="text-text-main dark:text-background-light text-2xl font-bold">$125.00</h2>
+</div>
+</div>
+<!-- Rating -->
+<div class="flex items-center gap-2 mt-3 cursor-pointer">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[18px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="text-sm font-medium underline underline-offset-2 decoration-primary/50 text-text-main dark:text-background-light">4.8 (124 reviews)</span>
+</div>
+</div>
+<div class="h-px bg-black/5 dark:bg-white/10 mx-4 my-4"></div>
+<!-- Volume Selection -->
+<div class="px-4 flex flex-col gap-3">
+<span class="text-sm font-semibold text-text-main dark:text-background-light">Select Volume</span>
+<div class="flex gap-3">
+<button class="volume-btn flex-1 py-3 px-4 rounded-full border border-black/10 dark:border-white/20 text-text-main dark:text-background-light text-sm font-medium hover:border-black/30 dark:hover:border-white/40 transition-all">
+                    30ml
+                </button>
+<button class="volume-btn selected flex-1 py-3 px-4 rounded-full bg-primary text-text-main text-sm font-bold shadow-sm ring-2 ring-primary ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark">
+                    50ml
+                </button>
+<button class="volume-btn flex-1 py-3 px-4 rounded-full border border-black/10 dark:border-white/20 text-text-main dark:text-background-light text-sm font-medium hover:border-black/30 dark:hover:border-white/40 transition-all">
+                    100ml
+                </button>
+</div>
+</div>
+<!-- Scent Profile -->
+<div class="px-4 py-8">
+<div class="bg-white dark:bg-white/5 rounded-lg p-6 flex justify-between items-start text-center">
+<div class="flex flex-col items-center gap-3 flex-1">
+<div class="size-12 rounded-full bg-primary/20 dark:bg-primary/10 flex items-center justify-center text-primary-dark">
+<span class="material-symbols-outlined text-text-main dark:text-primary">wb_sunny</span>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold tracking-widest text-text-muted mb-1">Top</p>
+<p class="text-sm font-medium dark:text-background-light">Bergamot</p>
+</div>
+</div>
+<div class="w-px h-16 bg-black/5 dark:bg-white/10 mx-2 self-center"></div>
+<div class="flex flex-col items-center gap-3 flex-1">
+<div class="size-12 rounded-full bg-primary/20 dark:bg-primary/10 flex items-center justify-center text-primary-dark">
+<span class="material-symbols-outlined text-text-main dark:text-primary">local_florist</span>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold tracking-widest text-text-muted mb-1">Heart</p>
+<p class="text-sm font-medium dark:text-background-light">Jasmine</p>
+</div>
+</div>
+<div class="w-px h-16 bg-black/5 dark:bg-white/10 mx-2 self-center"></div>
+<div class="flex flex-col items-center gap-3 flex-1">
+<div class="size-12 rounded-full bg-primary/20 dark:bg-primary/10 flex items-center justify-center text-primary-dark">
+<span class="material-symbols-outlined text-text-main dark:text-primary">spa</span>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold tracking-widest text-text-muted mb-1">Base</p>
+<p class="text-sm font-medium dark:text-background-light">White Musk</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Accordions -->
+<div class="px-4 flex flex-col gap-4">
+<details class="group bg-transparent" open="">
+<summary class="flex cursor-pointer items-center justify-between text-lg font-bold text-text-main dark:text-background-light list-none pb-2 border-b border-black/5 dark:border-white/10">
+                    Description
+                    <span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<div class="text-text-main/80 dark:text-background-light/80 pt-4 pb-2 text-base font-light leading-relaxed">
+<p>Inspired by the first rays of dawn in a Sicilian citrus grove. Ethereal Citron captures the vibrant zest of Italian bergamot, softened by the delicate embrace of jasmine petals and grounded in clean, sophisticated white musk. A scent for the modern minimalist.</p>
+</div>
+</details>
+<details class="group bg-transparent">
+<summary class="flex cursor-pointer items-center justify-between text-lg font-bold text-text-main dark:text-background-light list-none pb-2 border-b border-black/5 dark:border-white/10">
+                    Ingredients
+                    <span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<div class="text-text-main/80 dark:text-background-light/80 pt-4 pb-2 text-base font-light leading-relaxed">
+<p>Alcohol Denat., Parfum (Fragrance), Aqua (Water), Limonene, Linalool, Citral, Geraniol.</p>
+</div>
+</details>
+<details class="group bg-transparent">
+<summary class="flex cursor-pointer items-center justify-between text-lg font-bold text-text-main dark:text-background-light list-none pb-2 border-b border-black/5 dark:border-white/10">
+                    Shipping &amp; Returns
+                    <span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<div class="text-text-main/80 dark:text-background-light/80 pt-4 pb-2 text-base font-light leading-relaxed">
+<p>Free standard shipping on all orders over $100. Returns accepted within 30 days of purchase for unopened items.</p>
+</div>
+</details>
+</div>
+<!-- Review Teaser -->
+<div class="mt-8 px-4">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold text-text-main dark:text-background-light">Reviews</h3>
+<a class="text-sm font-semibold text-text-main dark:text-primary underline" href="#">See All</a>
+</div>
+<div class="bg-white dark:bg-white/5 rounded-lg p-5 shadow-sm border border-black/5 dark:border-white/5 relative overflow-hidden">
+<div class="absolute -top-4 -right-4 size-24 bg-primary/20 rounded-full blur-2xl"></div>
+<div class="flex items-center gap-3 mb-3">
+<div class="size-10 rounded-full bg-gray-200 dark:bg-white/10 bg-cover bg-center" data-alt="Portrait of reviewer Sarah M." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMQOji67aLHhgVTvnkMi69lha9D0kGdQ8KPZAWQ1txXszaSAL71NwnYke5m91jrf1t8Nr3wzOSmml5CQ_Z01EceXuHgOAg5QahqA7AksfUraOuTtypwTiCLGPM7PCoWjZNtSx6icLSjr2I3-ymaVl9LUB9WFWszKMkQM37NMgco4K8Spq6flaQR28J1beAko65r96AYa08DvsRB0SUXb2m5xJLbw4Ek81MDlp24fvNENfee7Uk40KGtCI_2Nt_hWbc4KkOmYo3zCIe');"></div>
+<div>
+<p class="text-sm font-bold text-text-main dark:text-background-light">Sarah M.</p>
+<p class="text-xs text-text-muted">Verified Buyer</p>
+</div>
+<div class="ml-auto flex text-primary text-[14px]">
+<span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-text-main dark:text-background-light text-sm italic leading-relaxed">"Absolutely in love with this scent. It's fresh but lasts all day. The packaging feels so premium. Definitely my new signature."</p>
+</div>
+</div>
+<!-- You Might Also Like -->
+<div class="mt-10 mb-6 pl-4">
+<h3 class="text-lg font-bold text-text-main dark:text-background-light mb-4">You Might Also Like</h3>
+<div class="flex overflow-x-auto gap-4 pb-4 pr-4 no-scrollbar">
+<!-- Card 1 -->
+<div class="min-w-[160px] flex flex-col gap-2 group cursor-pointer">
+<div class="w-full aspect-[3/4] rounded-lg bg-gray-100 dark:bg-white/5 bg-cover bg-center relative overflow-hidden" data-alt="Midnight Rose perfume bottle on dark background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHi-hYqKom56uRs6b8NM2QCKjxb641xnuoGwVctKKd1jb_ORPW1OgLl_YOsOBt3cmcozuXrtpGclPtiH_AS3CYLrkiqOYQSpgHWPC3ip7ArC68G7jLKmDFsPrIF11F_6_ZQeeEDgnjm3NM5xmrOKJ9Y4_SLE39MSXpyIb5_vALGl5YNj_GHs3SKzYX-1rikquH30P1ec5Zd7IOZ-I8WLH2IZVrX4vphEqyDUhFpf4qr7fLTxDex7XNgBE5OMulRtCobUXmXYy_uOjt');">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div>
+<p class="text-sm font-bold text-text-main dark:text-background-light truncate">Midnight Rose</p>
+<p class="text-xs text-text-muted">$145.00</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[160px] flex flex-col gap-2 group cursor-pointer">
+<div class="w-full aspect-[3/4] rounded-lg bg-gray-100 dark:bg-white/5 bg-cover bg-center relative overflow-hidden" data-alt="Oceanic Breeze perfume bottle with blue tint" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1NZoi3-IxBzOTjke1agtt0ka_0yN7mLKY8z5M0gvk8A8Kt0ZF89Ux-eO4rMGia2M99vnblkppKJAXvrGGw35xcIs_NEWXKpEsjaG8eE-G387atbV_D9H6O060aOQ1rhYEXEqCt57pu1Nb66npKwmvvuw1lbrA_AbUKf5xMEIE1Sic0OnZ1b9MyPFH0tNdG3-4XQEVRKersYeCbvOMawGwwPVbUfSv0tmg43d8wbeaTxPGKbIp56d7Lxo6MN7Uhn1pD88tXOvoe9AU');">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div>
+<p class="text-sm font-bold text-text-main dark:text-background-light truncate">Oceanic Breeze</p>
+<p class="text-xs text-text-muted">$115.00</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[160px] flex flex-col gap-2 group cursor-pointer">
+<div class="w-full aspect-[3/4] rounded-lg bg-gray-100 dark:bg-white/5 bg-cover bg-center relative overflow-hidden" data-alt="Amber Wood perfume bottle with warm lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBibfN1IepWnhjNlqfdgbd_1n2sOy-ZOGtpHEd9RzuFZBH0qs_SFOX7FRNCa_Csr3n0vHYtulX-rlOCSF7Bcw9iOIbm2YRGrTBreFoNVrECy3lDVuRQoLiHJZe5rH-4R-7w6vUOXUwZ-bPhjqQ96JVmj-5yb5l1YuMavm8BPfIivYiIajaapjwfpCXoenfMnYStK5he9cU5iWLDwQbl7xyoTtuOukbJJTENtScEAnA_ZKLjPo0xDO27zA98rxk22euyDI8ciVsJVPJB');">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div>
+<p class="text-sm font-bold text-text-main dark:text-background-light truncate">Amber Wood</p>
+<p class="text-xs text-text-muted">$135.00</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom Action Bar -->
+<div class="fixed bottom-0 left-0 w-full bg-white dark:bg-[#1a190b] border-t border-black/5 dark:border-white/5 pb-safe z-40 shadow-[0_-5px_30px_rgba(0,0,0,0.05)]">
+<div class="flex items-center gap-3 p-4 max-w-md mx-auto">
+<button class="flex items-center justify-center size-14 rounded-full bg-background-light dark:bg-white/5 border border-black/10 dark:border-white/10 shrink-0 text-text-main dark:text-background-light hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+<button class="add-to-bag flex-1 h-14 bg-primary rounded-full flex items-center justify-center gap-2 shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:scale-[1.02] transition-all active:scale-95">
+<span class="text-text-main font-bold text-lg tracking-wide">Add to Bag</span>
+<span class="w-1 h-1 bg-text-main rounded-full mx-1"></span>
+<span class="text-text-main font-bold text-lg">$125.00</span>
+</button>
+</div>
+<!-- Safe Area Padding for iOS Home Indicator -->
+<div class="h-6 w-full bg-white dark:bg-[#1a190b]"></div>
+<script src="../src/js/script.js"></script>
+</body></html>

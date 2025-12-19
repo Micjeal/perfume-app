@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist - LUXE SCENTS</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#23220f",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-stone-900 dark:text-white font-display antialiased wishlist-page">
+    <div class="min-h-screen pb-32">
+        <!-- Header -->
+        <header class="sticky top-0 z-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-stone-200/50 dark:border-stone-800/50">
+            <div class="flex items-center justify-between px-4 py-3">
+                <a href="../01-home/index.html" class="flex size-10 items-center justify-center rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+                <span class="material-symbols-outlined text-2xl">arrow_back</span>
+                </a>
+                <h1 class="text-lg font-bold tracking-wider uppercase">My Wishlist</h1>
+                <button class="flex size-10 items-center justify-center rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+                    <span class="material-symbols-outlined text-2xl">share</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Wishlist Stats -->
+        <div class="px-4 py-6">
+            <div class="bg-white dark:bg-stone-900 rounded-xl p-6 shadow-sm">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-2xl font-bold">12 Items</p>
+                        <p class="text-stone-500 dark:text-stone-400 text-sm mt-1">Total value: $1,680.00</p>
+                    </div>
+                    <div class="size-16 rounded-full bg-primary/20 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-3xl text-primary fill-current" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wishlist Items Grid -->
+        <div class="px-4">
+            <div class="grid grid-cols-2 gap-4">
+                <!-- Wishlist Item 1 -->
+                <div class="group relative bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative aspect-[3/4] overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByESiO8Hossn1Zv3h3WA90FrF71O1MU_IinUCUKbuxYFS_HfQdcRjdQJG9fcEQrR1tUUD0l-xYHpZvB_73tBwj-K2_B-Bz3UU4dEqdqxUFrXz5qsgf2CAMpolCnCPbELvNX8TLzmLrt0DpwdStiUNSbifcIRVkQzP5XOcTx49K8Np2WbrqzfsMsOKmSsQFqZV_KcOfUmSuD_w8sB3hCEFqSCT9nPDiFHK5GIxTGjK8AGN51ueTnskrqg2DGKSCEFTvDQfnSmIrf5yW');">
+                        </div>
+                        <button class="absolute top-3 right-3 size-10 rounded-full bg-white/90 dark:bg-black/70 backdrop-blur-sm flex items-center justify-center transition-transform hover:scale-110 active:scale-95">
+                            <span class="material-symbols-outlined text-red-500 fill-current" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        </button>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-sm truncate">Chanel N°5</h3>
+                        <p class="text-xs text-stone-500 dark:text-stone-400">Eau de Parfum</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="font-bold text-primary">$135.00</span>
+                            <button class="size-8 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-sm text-black">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wishlist Item 2 -->
+                <div class="group relative bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative aspect-[3/4] overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCPjweYuYi0APLzAPOh4p_Wk2Jca7dWcoZd_1nY07rWpvVN73M2tBQqjTy-YpTTf7VsrTTBf7TtMLUbHC86rOvuq2CMttgmf7GtCYag-gQKM1MeLMyirC7_syhjaHljmADrmVGK_h6yztrNGJ03UfEJHiul9Sp-3nkXpjkY6-UuObSVCz6zfa8DtNowKscVfizBRRTEG9x0AQYrtDSQFAoQokkIaa_0-9oXN4A_g28VOp7vcwX2o-PJiIQT-wy1YEKCrLm0ePKmAHv');">
+                        </div>
+                        <button class="absolute top-3 right-3 size-10 rounded-full bg-white/90 dark:bg-black/70 backdrop-blur-sm flex items-center justify-center transition-transform hover:scale-110 active:scale-95">
+                            <span class="material-symbols-outlined text-red-500 fill-current" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        </button>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-sm truncate">Dior Sauvage</h3>
+                        <p class="text-xs text-stone-500 dark:text-stone-400">Elixir</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="font-bold text-primary">$185.00</span>
+                            <button class="size-8 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-sm text-black">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More items... -->
+                <div class="group relative bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative aspect-[3/4] overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhb7_Kr_X8R6l7jTgx5_A8MD10yUp8mXy-fPCyjhyFxtppkmuHwsdHTewBtj3W_mjj1tsPwQPWF9EEM-4HY52ZQETDze5kfXiNHaut9Mp2x7L-M-RjPoD33--I5uDDp11KTu8f2F2KjR8gpatBAbimJBxIjEdjUg4bI_T7P2m9OpqqkwUGAwf7RcsM058gJpvdbYbaDHwtN3iiaYH4JraBvOBj5Ha1CHNUpY-j6ltv1ehOyIFSCpsnI8yy_BZQEfFlBVTDuJI-GJgu');">
+                        </div>
+                        <button class="absolute top-3 right-3 size-10 rounded-full bg-white/90 dark:bg-black/70 backdrop-blur-sm flex items-center justify-center transition-transform hover:scale-110 active:scale-95">
+                            <span class="material-symbols-outlined text-red-500 fill-current" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        </button>
+                        <div class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            Sale
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-sm truncate">Tom Ford Black Orchid</h3>
+                        <p class="text-xs text-stone-500 dark:text-stone-400">Eau de Parfum</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-primary">$120.00</span>
+                                <span class="text-xs text-stone-400 line-through">$150.00</span>
+                            </div>
+                            <button class="size-8 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-sm text-black">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative aspect-[3/4] overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQA2ehaGSTpi7dShMg6VvIzFZCDr7c_-ElY3oZIxRxt3fUXketOoCL49BIK6fA0ruiPS8HrqF5oMIkXEO6PnKrVp6zBdMAPP-CXtX9cXJTzSkdasgDBKLpcOeytywM7XZpFJNVeZ98_-XSDyUVBEXvf7EX1yxZklO_B8YIv8ycsy4fwgRPVCbzCT2-_toBvn4hKrtlhXpcn_R3jXH5iiMCn8uB6O_lmsacJtw8QtCM27i7rQJFlrysxl9VE4V9b1Y5mwshD2lzDrDf');">
+                        </div>
+                        <button class="absolute top-3 right-3 size-10 rounded-full bg-white/90 dark:bg-black/70 backdrop-blur-sm flex items-center justify-center transition-transform hover:scale-110 active:scale-95">
+                            <span class="material-symbols-outlined text-red-500 fill-current" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        </button>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-sm truncate">Le Labo Santal 33</h3>
+                        <p class="text-xs text-stone-500 dark:text-stone-400">Eau de Parfum</p>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="font-bold text-primary">$215.00</span>
+                            <button class="size-8 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-sm text-black">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="px-4 py-6 flex gap-3">
+            <button class="flex-1 h-12 rounded-full border-2 border-stone-900 dark:border-white text-stone-900 dark:text-white font-bold hover:bg-stone-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
+                Clear All
+            </button>
+            <button class="flex-1 h-12 rounded-full bg-primary text-black font-bold shadow-lg hover:shadow-xl transition-all">
+                Add All to Cart
+            </button>
+        </div>
+    </div>
+<script src="../src/js/script.js"></script>
+</body>
+</html>
